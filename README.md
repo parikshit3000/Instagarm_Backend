@@ -1,2 +1,2 @@
-# RESTapi-for-Instagarm_Backend
+# REST API-for-Instagarm_Backend
 I have created a RESTapi for CRUD operations on Users and Posts.
