@@ -5,9 +5,9 @@ const express = require("express"),
   helmet = require('helmet'),
   morgan = require('morgan');
 
-const userRoute = require('./routes/users');
-const authRoute = require('./routes/auth');
-const postRoute = require('./routes/posts');
+const userRoute = require('./routes/index2');
+const authRoute = require('./routes/index2');
+const postRoute = require('./routes/index');
 
 dotenv.config();
 const app = express();
@@ -25,11 +25,6 @@ mongoose.connect(process.env.MONGO_URI,  { useUnifiedTopology: true, useNewUrlPa
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
-
-// Test route
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
 
 // Routes
 app.use('/api/users', userRoute);
